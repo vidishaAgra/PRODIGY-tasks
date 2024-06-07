@@ -1,0 +1,460 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #080807;
+}
+
+.black_load{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    z-index: 99;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+.black_load span{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+
+}
+.black_load h1{
+    color: beige;
+    font-family: Cascadia Mono ExtraLight;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.black_load h1:nth-child(2){
+    color: aquamarine;
+    text-shadow: .4vw .4vw .4vw  aqua ;
+    animation: blink 1s linear infinite;
+}
+@keyframes blink { 
+    0% { 
+        opacity: 0; 
+    } 
+
+    50% { 
+        opacity: 0.7; 
+    } 
+
+    100% { 
+        opacity: 0; 
+    } 
+} 
+
+.white_load{
+    height: 100vh;
+    width: 100%;
+    background-color: beige;
+    position: fixed;
+   z-index: 90;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.white_load img{
+    width: 40vw;
+    position: relative;
+}
+.white_load h1{
+    position: absolute;
+    font-family: Gingies Bubble;
+    color: #4f4141;
+    text-transform: uppercase;
+    font-size: 4.5vw;
+
+}
+.main{
+    height: 473%;
+    width: 100%;
+    background-color: #080807;
+    position: absolute;
+}
+nav{
+    height:5vw;
+    width: 100%;
+    padding: 3vh 3vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .1em solid white;
+    align-items:center ;
+}
+
+.main nav .about_me h3,.contact_me a h3{
+    font-family:Copperplate Gothic Light;
+    text-transform: uppercase;
+    letter-spacing: .06vw;
+    font-weight: 100;
+    font-size: 1.4vw;
+    color: beige;
+    
+}
+.main nav .about_me a{
+    text-decoration: none;
+
+}
+
+.main nav .contact_me a {
+    text-decoration: none;
+}
+.main nav .contact_me a h3{
+    position: relative;
+    z-index: 99;
+}
+.main nav .contact_me  {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: .1em solid aquamarine;
+    padding: 1em 1em;
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+}
+.main nav .contact_me a .green{
+    padding: 0.5em 1em;
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left .4s ease-in-out;
+}
+.main nav .contact_me:hover .green{
+    left:0;
+    
+}
+.main nav .contact_me :hover{
+    color: #000;
+}
+
+.main .page1{
+    
+    height: 80vh;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 0 3.5em;;
+}
+
+.page1 h1{
+    padding-top: 10%;
+    color: beige;
+    font-family: Lucida Bright;
+    text-transform: uppercase;
+    font-size: 26vw;
+    font-stretch: 50%;
+    font-weight: 900;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    border: 2px solid black;
+}
+
+.page2{
+    padding: 0;
+    height: 130vh;
+    width: 100%;
+    background-color: beige;
+    border-radius: 2em;
+   
+    
+
+}
+.page2 .me{
+    /* position: relative; */
+    /* can be omitted for a regular non-lazy image */
+    /* max-width: 100%; */
+    /* border-radius: 7em; */
+    /* width:26%; */
+    height: 100vh;
+
+    border-radius: 7.5vw;
+    width:26vw;
+    height: 80%;
+    margin-left: 9%;
+    transform: translateY(-95%);
+    /* display: block; */
+    background-color: chartreuse;
+    position: absolute;
+    /* overflow: hidden; */
+    background: url(vidhu.jpg);
+    background-size: cover;
+    transition: .01s;
+    margin-top:5%;
+}
+.page2 .me:hover{
+    background: url(ncc.jpg);
+    background-size: cover;
+
+}
+/* .page2 .me .img1{
+   height: 100%;
+   width: 100%;
+    display: none;
+    position: relative;
+    border-radius: 7em;
+    
+
+} */
+/* .img2{
+    top: -100%;
+    height: 100%;
+   width: 100%;
+    display: none;
+    position: relative;
+    border-radius: 7em; 
+    
+} */
+
+
+.main .page2 .about h1 span,.main .page2 .about_content p{
+font-family: Arabic Typesetting;
+color: #313131;
+}
+.main .page2 .about{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 50%;
+    /* background-color: #b97474; */
+}
+.main .page2 .about h1{
+    padding: 1.4vw;
+    margin-top: 6vh;
+}
+.main .page2 .about h1 span{
+    font-size: 8vw;
+    text-transform: uppercase;
+}
+.main .page2 .about_content{
+    height: 55vh;
+    width: 50%;
+    /* background-color: #b/97474; */
+    margin-left:50%;
+    margin-top:5%;
+    padding:2.5%;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+.main .page2 .about_content p{
+    margin-top:10%;
+    text-transform:initial;
+}
+.main .page3{
+    width: 100%;
+    height: 100vh;
+   
+    /* background-color: aqua; */
+    /* padding-top: -20%; */
+    position:relative;
+    padding-top:9%;
+
+}
+
+.main .page3 .elem-container{
+    width: 100%;
+    height: 60%;
+    width: 100%;
+    height: 54vh;
+    /* background-color: beige; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding-top:9%; */
+}
+
+.main .page3 .elem-container .elem{
+    width: 16vw;
+    height: 100%;
+    /* background-color: blue; */
+    border-radius: 20%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #7F776E;
+    border-left: 2px solid #7F776E;
+    border-right: 2px solid #7F776E;
+
+    
+}
+.main .page3 .elem-container .elem .link
+{
+   
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      
+}
+
+.main .page3 .elem-container .elem .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #BABAAD;
+    border-radius: 20%;
+    position: absolute;
+    top:100%;
+    transition: .3s ease;
+}
+.main .page3 .elem-container .elem h2{
+    position: relative;
+    z-index: 9;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+}
+.main .page3 .elem-container .elem h2 a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.main .page3 .elem-container .elem:hover .overlay{
+    top:0%;
+}
+.main .page3 .elem-container .elem:hover h2{
+    color: #000;
+}
+
+ .fixed-image{
+    height: 20vw;
+    width: 14vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 199;
+    top:50%;left:43%;
+    display: none;
+    background-size:contain;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+
+}
+.main .page4{
+    height: 6vh;
+    width: 100%;
+    background-color: #080807;
+    display: flex;
+    align-items: center;
+    
+    font-size: 1.4vw;
+    
+    text-transform: uppercase;
+}
+.main .page4 .footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding:0 2%;
+    justify-content: space-between;
+}
+.main .page4 .footer .footerleft{
+    color: aliceblue;
+}
+.main .page4 .footer .footerright {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    color: antiquewhite;
+    text-decoration: none;
+}
+.main .page4 .footer .footerright h4{
+    font-size: .9em;
+
+}
+.main .page4 .footer .footerright h4 a{
+    color: antiquewhite;
+    text-decoration: none;
+
+}
+
+
+
+/* responsive */
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 600px) {
+    
+    .main{
+        height: 400vh;
+        width: 100%;
+        background-color: #080807;
+        position: absolute;
+    }
+    .page1{
+        height: 60%;
+    }
+    .page2 .me{
+        
+    
+        width: 30vw;
+        height: 30vh;
+        top: 40vh;
+        
+    }
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    /* Adjust styles for small tablets here */
+    body {
+        font-size: 16px;
+    }
+    
+    /* Example: Slightly larger padding for tablet sizes */
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Medium Devices, Tablets & Small Laptops */
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Adjust styles for medium devices here */
+    /* Example: Multi-column layout for larger tablets and small laptops */
+    .column {
+        float: left;
+        width: 50%;
+    }
+}
+
+/* Large Devices, Laptops & Desktops */
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* Adjust styles for large devices here */
+    /* Example: More space for side navigation */
+    .sidebar {
+        width: 250px;
+    }
+}
+
+/* Extra Large Devices, Large Desktops */
+@media only screen and (min-width: 1201px) {
+    /* Adjust styles for extra large devices here */
+    body {
+        font-size: 18px;
+    }
+    
+    /* Example: Ensure maximum width for content for readability */
+    .content {
+        max-width: 1200px;
+        margin: auto;
+    }
+}

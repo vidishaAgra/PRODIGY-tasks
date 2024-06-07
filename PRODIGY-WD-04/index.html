@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="black_load"><pre><span><h1>vidisha <h1>agrawal </h1> <h1>is </h1> <h1>a </h1>  </h1></span></pre> </div>
+        <div class="white_load"><img src="cloud.png" alt=""><h1>daydreamer</h1></div>
+    </div>
+<div class="main"> 
+<div class="page1">
+    <nav>
+        <div class="about_me">
+            <a href="#page2">
+            <h3>about me</h3>
+        </a>
+        </div>
+        <div class="contact_me">
+            <a href="#page4">
+            <h3>contact me</h3>
+            <div class="green"></div>
+        </a>
+        </div>
+    </nav> 
+    <h1>hii i'm vidisha</h1>
+</div>
+<div class="page2" id="page2">
+    <div class="about" id="about">
+        <h1> <span>a</span><span>b</span><span>o</span><span>u</span><span>t</span>  </h1>
+        <h1><span>m</span><span>e</span><span>.</span></h1>
+    </div>
+    <div class="about_content">
+       <h2>hello</h2> <h2>I'm delighted to meet you! </h2> 
+       <p> Currently, I'm a Computer Science student at MIT-WPU, and I come from Jaipur. Lately, I've developed a keen interest in how technology shapes society, and I have a knack for art. I'm always eager to learn from others' experiences and knowledge.
+        <br>
+         I also hold a B certificate as an NCC cadet.
+        
+        If you ever want to join me for a dance studio session, just let me know! And if you're interested in collaboration, feel free to email me at vidishasagar123@gmail.com.</p>
+    </div>
+    <div class="me">
+        <!-- <img class="img1" src="vidhu.jpg" alt=""> -->
+        <!-- <img class="img2" src="ncc.jpg" alt=""> -->
+    </div>
+</div>
+
+<div class="page3">
+    <div class="fixed-image">
+
+    </div>
+    <div class="elem-container">
+        <div class="elem" data-image="Frame1.png">
+            <h2>education</h2>
+            <div class="overlay"></div>
+        </div>
+        <div class="elem" >
+            <h2>resume</h2>
+            <div class="overlay"></div>
+            <a target="_blank" href="https://vidisha.tiiny.site/">
+            <span class="link">
+
+            </span></a>
+        </div>
+         <div class="elem" data-image="frame2.png">
+            <h2>skills</h2>
+            <div class="overlay"></div>
+        </div>
+    </div>
+</div>
+<div class="page4" id="page4">
+    
+    <div class="footer">
+        <div class="footerleft">
+            <h5>© 2024 </h5>
+            <h5>vidisha agrawal</h5>
+        </div>
+        <div class="footerright">
+            <h4><a href="https://www.linkedin.com/in/vidisha-agrawal-791064233/" target="_blank">LinkedIn</a></h4>
+            <h4><a href="https://www.instagram.com/vidishasagar?igsh=MXJiYm52dnBjaXNsOA==" target="_blank">Instagram</a></h4>
+            <h4><a href="mailto: 1032210654@mitwpu.edu.in" target="_blank">Gmail</a></h4>
+         
+        </div>
+      </div>
+</div>
+</div>   
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
+<script>
+    var t=gsap.timeline();
+    t.from(".black_load h1",{
+        x:500,
+        stagger:.2,
+        duration:1,
+        
+        delay:.2,
+    })
+    t.to(".black_load span h1",{
+        y:-100,
+        opacity:0,
+        stagger:.2,
+        duration:2,
+        color:"black", 
+        delay:.2,
+    })
+    t.to(".black_load",{
+        top:"-100vh",
+        duration:3,
+        delay:-2.6,    
+        ease:Expo.easeInOut
+
+    })
+    t.to(".white_load h1",{
+        rotation:40,
+        delay:-1.6,
+        duration:1
+    })
+   
+    t.to(".white_load",{
+        top:"-100vh",
+        duration:2.3,
+        delay:-2 ,
+        ease:Expo.easeInOut
+    })
+    t.from(".main  nav",{
+        y:-100,
+        duration:.6,
+        delay:-.5,
+        opacity:0
+    })
+    t.from(".main  nav div",{
+        y:-100,
+        duration:.8,
+        delay:.2,
+        stagger:.3,
+        opacity:0
+    })
+    t.to(".page1 h1",{
+        transform:"translateX(-100%)",
+        fontWeight:60,
+        fontSize: "20vw",
+        scrollTrigger:{
+        trigger:".page1",
+        scroller:"body",
+        start:"top 0",
+        end:"top -200",
+        scrub:2,
+        pin:true,}
+    })
+    t.from(".main .page2 .about h1 span",{
+        y:-100,
+        duration:.2,
+        delay:.2,
+        markers:true,
+        stagger:.3,
+        color:"lightPink",
+        opacity:0,
+        scrollTrigger:{
+            trigger:".page2",
+            scroller:"body",
+            start:"top 30",
+         
+            scrub:2,
+            pin:true,}
+        
+    })
+    t.from(".main .page2 .about_content p",{
+        y:100,
+        duration:.2,
+        delay:.1,
+        scrollTrigger:{
+            trigger:".page2",
+            scroller:"body",
+            start:"top 40",
+         
+            scrub:2,
+            pin:true,},
+        
+        opacity:0
+    })
+    
+       /* t.to(".main_black",{
+            height:0,
+            duration:3,
+            
+            delay:1,
+            ease:Expo.easeInOut
+        })
+        t.to(".main_white",{
+            height:"60vh",
+            duration:2,
+            delay:-3 ,
+            ease:Expo.easeInOut
+        })
+        t.to(".page1",{
+            height:"100vh",
+            duration:2,
+            delay:-2.2   ,
+            ease:Expo.easeInOut
+        })
+        t.to(".page1 h1",{
+            transform:"translateX(-100%)",
+          scrollTrigger:{
+            trigger:".page1",
+            scroller:"body",
+           
+          }
+        })
+        t.from(".page2",{
+            height:100,
+        })*/
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+        
+        
+ 
