@@ -1,4 +1,4 @@
-![ss1](https://github.com/vidishaAgra/PRODIGY-tasks/assets/166367677/faebe445-cabe-4c26-af2a-d165782fb2f7)portfolio:
+portfolio:
 DEPLOYED PORTFOLIO LINK : https://vidisha.netlify.app/
 
 weather app:
